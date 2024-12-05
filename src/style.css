@@ -462,8 +462,14 @@ footer {
   }
   
   .bento-item.large {
-    grid-column: span 1;
-    grid-template-columns: 1fr;
+    grid-column: span 1; /* Asegúrate de que ocupe una sola columna */
+    display: flex; /* Cambia a flex para apilar verticalmente */
+    flex-direction: column; /* Apila los elementos verticalmente */
+  }
+
+  .bento-item.large img {
+    width: 100%; /* Asegúrate de que la imagen ocupe el 100% del ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
   }
   
   .hero-title {
